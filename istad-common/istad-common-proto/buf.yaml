@@ -1,0 +1,13 @@
+version: v2
+
+modules:
+  - path: src/main/proto
+    name: buf.build/istad/istad-common-proto
+
+lint:
+  use:
+    - STANDARD
+
+breaking:
+  use:
+    - FILE

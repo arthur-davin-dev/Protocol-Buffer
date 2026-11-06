@@ -1,0 +1,10 @@
+plugins {
+    id 'spring-boot-common-conventions'
+}
+
+dependencies {
+    implementation project(':order-service-client')
+    implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+    // Makes generated payment messages and client stubs available to Order Service.
+    implementation 'org.springframework.boot:spring-boot-starter-grpc-client'
+}

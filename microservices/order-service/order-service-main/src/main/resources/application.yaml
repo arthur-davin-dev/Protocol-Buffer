@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: order-service
+  grpc:
+    client:
+      channel:
+        customer-channel:
+          target: static://${CUSTOMER_GRPC_HOST:localhost}:${CUSTOMER_GRPC_PORT:9090}

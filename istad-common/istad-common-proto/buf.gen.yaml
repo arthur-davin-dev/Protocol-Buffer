@@ -1,0 +1,18 @@
+version: v2
+
+clean: true
+
+plugins:
+  # Java
+  - remote: buf.build/protocolbuffers/java
+    out: build/generated/sources/buf/main/java
+
+  - remote: buf.build/grpc/java
+    out: build/generated/sources/buf/main/java
+
+  # Python
+  - remote: buf.build/protocolbuffers/python
+    out: gen/python
+
+  - remote: buf.build/grpc/python
+    out: gen/python

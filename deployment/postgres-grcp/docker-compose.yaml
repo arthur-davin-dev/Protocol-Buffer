@@ -1,0 +1,20 @@
+volumes:
+  ite-pg-vol:
+    driver: local
+networks:
+  ite-net:
+    external: true
+services:
+  grpc-spring:
+    container_name: grpc-spring
+    image: postgres:18.4
+    ports:
+      - "9876:5432"
+    environment:
+      POSTGRES_PASSWORD: qwerqwer
+      POSTGRES_USER: grpc
+    volumes:
+      - ite-pg-vol:/var/lib/postgresql/18/docker
+      - ./init_db/:/docker-entrypoint-initdb.d
+    networks:
+      - ite-net

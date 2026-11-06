@@ -1,0 +1,9 @@
+plugins {
+    id 'spring-boot-common-conventions'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom libs.spring.cloud.dependencies.get().toString()
+    }
+}

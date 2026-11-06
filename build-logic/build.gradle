@@ -1,0 +1,23 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+group = 'kh.eco.istad'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-gradle-plugin:4.1.2'
+    implementation 'io.spring.gradle:dependency-management-plugin:1.1.7'
+
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}

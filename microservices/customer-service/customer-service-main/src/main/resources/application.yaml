@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: customer-service
+  grpc:
+    server:
+      port: ${CUSTOMER_GRPC_PORT:9090}
+
+# Local sample data for exercising the shared CustomerService proto.
+customer:
+  grpc:
+    customers:
+      "11111111-1111-1111-1111-111111111111":
+        username: demo.customer
+        family-name: Customer
+        given-name: Demo
+        email: demo.customer@example.test
+        phone-number: "+85512345678"
+        status: ACTIVE

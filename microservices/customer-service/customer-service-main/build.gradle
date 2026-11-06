@@ -1,0 +1,8 @@
+plugins {
+    id 'spring-boot-common-conventions'
+}
+
+dependencies {
+    implementation 'kh.eco.istad:istad-common-proto:1.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-grpc-server'
+}
